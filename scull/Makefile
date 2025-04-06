@@ -17,9 +17,8 @@ EXTRA_CFLAGS += -I$(LDDINC)
 ifneq ($(KERNELRELEASE),)
 # call from kernel build system
 
-
-obj-m := main.o pipe.o access.o
-
+scull-objs := main.o 
+obj-m := scull.o
 else
 
 KERNELDIR ?= /lib/modules/$(shell uname -r)/build
